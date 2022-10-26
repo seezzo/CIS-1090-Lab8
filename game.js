@@ -9,7 +9,7 @@ function random(max){
 
 //This function sets the position of the chicken to a random
 //place inside the game div
-function setRandomPosition(){
+function randomizeChicken(){
     chicken.style.top = random(game.offsetHeight - chicken.offsetHeight) + "px";
     chicken.style.left = random(game.offsetWidth - chicken.offsetWidth) + "px";
 }
@@ -31,11 +31,11 @@ chicken.addEventListener('mouseover', function(){
     //When you get the mouse over the chicken there
     //is an 80% chance the chicken moves before you
     //can click it
-    if ( Math.random() < .8 ){
-        setRandomPosition();
+    if ( random(100) < 80 ){
+        randomizeChicken();
     }
 });
 
 //Another function the browser gives us!
 //Every 1000 miliseconds (1 second) move that bird
-window.setInterval(setRandomPosition, 1000);
+window.setInterval(randomizeChicken, 1000);
