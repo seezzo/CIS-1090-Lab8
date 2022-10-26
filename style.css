@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body {
+  padding: 25px;
+}
+
+#game {
+  padding: 10px;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #aaa;
+  position: relative;
+}
+
+#game > button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: xxx-large;
+}
